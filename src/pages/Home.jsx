@@ -5,10 +5,12 @@ import Services from "../components/Services";
 import Team from "../components/Team";
 import Donate from "../components/Donate";
 import Footer from "../components/Footer";
+import ScrollRouteSync from "../components/ScrollRouteSync";
 
 export default function Home() {
   return (
     <>
+      <ScrollRouteSync />
       <Navbar />
       <Hero />
       <About />
