@@ -165,6 +165,41 @@ export default function Donate() {
             ))}
           </div>
 
+          {/* divider */}
+          <div className="flex items-center gap-4 my-8">
+            <div className="h-px flex-1 bg-orange-100" />
+            <span className="text-xs sm:text-sm uppercase tracking-wide text-gray-400 font-semibold">
+              Or Scan &amp; Pay via UPI
+            </span>
+            <div className="h-px flex-1 bg-orange-100" />
+          </div>
+
+          {/* UPI QR code */}
+          <div className="flex flex-col items-center">
+            <div className="rounded-2xl border border-orange-100 p-3 sm:p-4 shadow-sm bg-white">
+              <img
+                src="/images/donate-qr.png"
+                alt="Scan to donate via UPI - Sitaram Sanjeevani Anandashram"
+                className="w-48 sm:w-56 h-auto rounded-lg"
+              />
+            </div>
+
+            <div className="mt-5 flex items-center gap-3 bg-orange-50 rounded-full pl-5 pr-2 py-2">
+              <span className="text-sm sm:text-base font-medium text-gray-700 break-all">
+                sitaramsanjeevani@srcb
+              </span>
+              <motion.button
+                whileTap={{ scale: 0.95 }}
+                whileHover={{ y: -2 }}
+                onClick={() => copyText("sitaramsanjeevani@srcb")}
+                className="shrink-0 inline-flex items-center justify-center gap-2 bg-white text-primary px-4 py-2 rounded-full font-medium hover:bg-primary hover:text-white transition-all"
+              >
+                <FaCopy />
+                Copy
+              </motion.button>
+            </div>
+          </div>
+
           {/* note */}
           <p className="mt-6 text-sm sm:text-base text-gray-500 text-center">
             Thank you for supporting our mission ❤️
